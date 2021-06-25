@@ -1,9 +1,9 @@
 <?php
 
-namespace yidas\linePay;
+namespace victorzhn\linePay;
 
 use Exception;
-use yidas\linePay\Response;
+use victorzhn\linePay\Response;
 use GuzzleHttp\Client as HttpClient;
 use GuzzleHttp\Psr7\Request;
 
@@ -158,7 +158,7 @@ class Client
      * @param array $queryParams
      * @param array $bodyParams
      * @param array $options
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     protected function requestHandler($version, $method, $uri, $queryParams=null, $bodyParams=null, $options=[])
     {
@@ -204,7 +204,7 @@ class Client
 
         } catch (\GuzzleHttp\Exception\ConnectException $e) {
 
-            throw new \yidas\linePay\exception\ConnectException($e->getMessage(), $this->request);
+            throw new \victorzhn\linePay\exception\ConnectException($e->getMessage(), $this->request);
         }
 
         return new Response($response, $stats);
@@ -215,7 +215,7 @@ class Client
      *
      * @param array $queryParams
      * @param string $version API version
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function details($queryParams, $version="v3")
     {   
@@ -231,7 +231,7 @@ class Client
      * Request payment
      *
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function request($bodyParams)
     {
@@ -245,7 +245,7 @@ class Client
      * Alias of Request payment
      *
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function reserve($bodyParams)
     {
@@ -257,7 +257,7 @@ class Client
      *
      * @param integer $transactionId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function confirm($transactionId, $bodyParams)
     {
@@ -272,7 +272,7 @@ class Client
      *
      * @param integer $transactionId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function refund($transactionId, $bodyParams=null)
     {
@@ -286,7 +286,7 @@ class Client
      * Check Payment Status API
      *
      * @param integer $transactionId
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function check($transactionId)
     {
@@ -301,7 +301,7 @@ class Client
      *
      * @param integer $transactionId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function authorizationsCapture($transactionId, $bodyParams)
     {
@@ -316,7 +316,7 @@ class Client
      *
      * @param integer $transactionId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function capture($transactionId, $bodyParams)
     {
@@ -328,7 +328,7 @@ class Client
      *
      * @param integer $transactionId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function authorizationsVoid($transactionId, $bodyParams=null)
     {
@@ -343,7 +343,7 @@ class Client
      *
      * @param integer $transactionId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function void($transactionId, $bodyParams=null)
     {
@@ -355,7 +355,7 @@ class Client
      *
      * @param integer $regKey
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function preapproved($regKey, $bodyParams=null)
     {
@@ -370,7 +370,7 @@ class Client
      *
      * @param integer $regKey
      * @param array $queryParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function preapprovedCheck($regKey, $queryParams=null)
     {
@@ -385,7 +385,7 @@ class Client
      *
      * @param integer $regKey
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function preapprovedExpire($regKey, $bodyParams=null)
     {
@@ -399,7 +399,7 @@ class Client
      * OneTimeKeys payment
      *
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function oneTimeKeysPay($bodyParams)
     {
@@ -414,7 +414,7 @@ class Client
      *
      * @param string $orderId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function ordersCheck($orderId, $queryParams=null)
     {
@@ -429,7 +429,7 @@ class Client
      *
      * @param string $orderId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function ordersVoid($orderId, $bodyParams=null)
     {
@@ -444,7 +444,7 @@ class Client
      *
      * @param string $orderId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function ordersCapture($orderId, $bodyParams=null)
     {
@@ -459,7 +459,7 @@ class Client
      *
      * @param string $orderId
      * @param array $bodyParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function ordersRefund($orderId, $bodyParams=null)
     {
@@ -473,7 +473,7 @@ class Client
      * Get Authorization details
      *
      * @param array $queryParams
-     * @return yidas\linePay\Response
+     * @return victorzhn\linePay\Response
      */
     public function authorizations($queryParams)
     {

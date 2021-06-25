@@ -1,6 +1,6 @@
 <?php
 
-namespace yidas\linePay\exception;
+namespace victorzhn\linePay\exception;
 
 use GuzzleHttp\Exception\ConnectException as BaseException;
 

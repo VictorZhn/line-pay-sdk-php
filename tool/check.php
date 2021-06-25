@@ -9,7 +9,7 @@ if (!$config) {
     die("<script>alert('Session expired, please resend.');history.back();</script>");
 }
 // Create LINE Pay client
-$linePay = new \yidas\linePay\Client([
+$linePay = new \victorzhn\linePay\Client([
     'channelId' => $config['channelId'],
     'channelSecret' => $config['channelSecret'],
     'isSandbox' => ($config['isSandbox']) ? true : false, 

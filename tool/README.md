@@ -1,7 +1,7 @@
 LINE Pay API Tools
 ==================
 
-<img src="https://raw.githubusercontent.com/yidas/line-pay-sdk-php/master/img/sample-index-desktop.png" height="500" /><img src="https://raw.githubusercontent.com/yidas/line-pay-sdk-php/master/img/sample-index-mobile.png" height="500" />
+<img src="https://raw.githubusercontent.com/victorzhn/line-pay-sdk-php/master/img/sample-index-desktop.png" height="500" /><img src="https://raw.githubusercontent.com/victorzhn/line-pay-sdk-php/master/img/sample-index-mobile.png" height="500" />
 
 FEATURES
 --------
@@ -22,7 +22,7 @@ INSTALLATION
 Download repository and run Composer install in your Web directory: 
 
 ```
-git clone https://github.com/yidas/line-pay-sdk-php.git;
+git clone https://github.com/victorzhn/line-pay-sdk-php.git;
 cd line-pay-sdk-php;
 composer install;
 ```
@@ -35,7 +35,7 @@ Then you can access the sample site from `https://{yourweb-dir}/line-pay-sdk-php
 FLOW
 ----
 
-Payment flow: [Request](https://github.com/yidas/line-pay-sdk-php/tree/v3#request-api) -> [Confirm](https://github.com/yidas/line-pay-sdk-php/tree/v3#confirm-api) / [Details](https://github.com/yidas/line-pay-sdk-php/tree/v3#payment-details-api) -> [Refund](https://github.com/yidas/line-pay-sdk-php/tree/v3#refund-api)
+Payment flow: [Request](https://github.com/victorzhn/line-pay-sdk-php/tree/v3#request-api) -> [Confirm](https://github.com/victorzhn/line-pay-sdk-php/tree/v3#confirm-api) / [Details](https://github.com/victorzhn/line-pay-sdk-php/tree/v3#payment-details-api) -> [Refund](https://github.com/victorzhn/line-pay-sdk-php/tree/v3#refund-api)
 
 ---
 

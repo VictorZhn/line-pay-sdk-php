@@ -8,15 +8,15 @@
 
 LINE Pay SDK for PHP
 
-[![Latest Stable Version](https://poser.pugx.org/yidas/line-pay-sdk/v/stable?format=flat-square)](https://packagist.org/packages/yidas/line-pay-sdk)
-[![License](https://poser.pugx.org/yidas/line-pay-sdk/license?format=flat-square)](https://packagist.org/packages/yidas/line-pay-sdk)
+[![Latest Stable Version](https://poser.pugx.org/victorzhn/line-pay-sdk/v/stable?format=flat-square)](https://packagist.org/packages/victorzhn/line-pay-sdk)
+[![License](https://poser.pugx.org/victorzhn/line-pay-sdk/license?format=flat-square)](https://packagist.org/packages/victorzhn/line-pay-sdk)
 
-English | [繁體中文](https://github.com/yidas/line-pay-sdk-php/blob/v3/README-zh_TW.md)
+English | [繁體中文](https://github.com/victorzhn/line-pay-sdk-php/blob/v3/README-zh_TW.md)
 
 |SDK Version|Online API Version|Offline API Version|
 |:-:|:-:|:-:|
 |v3 (Current)|[v3](https://pay.line.me/tw/developers/apis/onlineApis?locale=en_US)|[v2](https://pay.line.me/tw/developers/apis/documentOffline?locale=en_US)|
-|[v2](https://github.com/yidas/line-pay-sdk-php/tree/v2)|[v2](https://pay.line.me/documents/online_v2_en.html)|[v2](https://pay.line.me/tw/developers/apis/documentOffline?locale=en_US)|
+|[v2](https://github.com/victorzhn/line-pay-sdk-php/tree/v2)|[v2](https://pay.line.me/documents/online_v2_en.html)|[v2](https://pay.line.me/tw/developers/apis/documentOffline?locale=en_US)|
 
 OUTLINE
 -------
@@ -67,11 +67,11 @@ OUTLINE
 DEMONSTRATION
 -------------
 
-[Sample Codes Site for LINE Pay (Request, Confirm, Refund)](https://github.com/yidas/line-pay-sdk-php/tree/v3/sample)
+[Sample Codes Site for LINE Pay (Request, Confirm, Refund)](https://github.com/victorzhn/line-pay-sdk-php/tree/v3/sample)
 
 ```php
 // Create LINE Pay client
-$linePay = new \yidas\linePay\Client([
+$linePay = new \victorzhn\linePay\Client([
     'channelId' => 'Your merchant X-LINE-ChannelId',
     'channelSecret' => 'Your merchant X-LINE-ChannelSecret',
     'isSandbox' => true, 
@@ -112,7 +112,7 @@ if (!$response->isSuccessful()) {
 header('Location: '. $response->getPaymentUrl() );
 ```
 
-> [LINE Pay API Tool for testing and loging APIs](https://github.com/yidas/line-pay-sdk-php/tree/v3/tool)
+> [LINE Pay API Tool for testing and loging APIs](https://github.com/victorzhn/line-pay-sdk-php/tree/v3/tool)
 
 ---
 
@@ -147,14 +147,14 @@ INSTALLATION
 
 Run Composer in your project:
 
-    composer require yidas/line-pay-sdk ~3.0.0
+    composer require victorzhn/line-pay-sdk ~3.0.0
     
 Then you could use SDK class after Composer is loaded on your PHP project:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-use yidas\linePay\Client;
+use victorzhn\linePay\Client;
 ```
 
 ---
@@ -169,7 +169,7 @@ Before using any API methods, first you need to create a Client with configurati
 Create a LINE Pay Client with [API Authentication](#authentication):
 
 ```php
-$linePay = new \yidas\linePay\Client([
+$linePay = new \victorzhn\linePay\Client([
     'channelId' => 'Your merchant X-LINE-ChannelId',
     'channelSecret' => 'Your merchant X-LINE-ChannelSecret',
     'isSandbox' => true, 
@@ -181,7 +181,7 @@ $linePay = new \yidas\linePay\Client([
 You could set device information for Client (Optional):
 
 ```php
-$linePay = new \yidas\linePay\Client([
+$linePay = new \victorzhn\linePay\Client([
     'channelId' => 'Your merchant X-LINE-ChannelId',
     'channelSecret' => 'Your merchant X-LINE-ChannelSecret',
     'isSandbox' => true, 
@@ -192,7 +192,7 @@ $linePay = new \yidas\linePay\Client([
 
 ### Response
 
-Each API methods will return `yidas\linePay\Response` object, which can retrieve data referred to LINE Pay JSON response data structure.
+Each API methods will return `victorzhn\linePay\Response` object, which can retrieve data referred to LINE Pay JSON response data structure.
 
 #### Retrieving Data
 
@@ -552,14 +552,14 @@ Client throws exceptions for errors that occur during a API transaction.
 
 ### ConnectException
 
-A `yidas\linePay\exception\ConnectException` exception is thrown in the event of a networking error (Timeout). 
+A `victorzhn\linePay\exception\ConnectException` exception is thrown in the event of a networking error (Timeout). 
 
 ```php
 try {
 
     $response = $linePay->confirm($transactionId, $bodyParams);
     
-} catch (\yidas\linePay\exception\ConnectException $e) {
+} catch (\victorzhn\linePay\exception\ConnectException $e) {
 
     // Process of confirm API timeout handling
 }

@@ -35,7 +35,7 @@ $logs = isset($_SESSION['logs']) ? $_SESSION['logs'] : [];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.com/fluidicon.png">
-    <title>Tool - yidas/line-pay-sdk-php</title>
+    <title>Tool - victorzhn/line-pay-sdk-php</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
       pre.log {
@@ -70,7 +70,7 @@ $logs = isset($_SESSION['logs']) ? $_SESSION['logs'] : [];
 </head>
 <body>
 <div style="padding:30px 10px; max-width: 600px; margin: auto;">
-  <h3>LINE Pay API Tool <a href="https://github.com/yidas/line-pay-sdk-php"><img src="https://github.com/favicon.ico" height="20" width="20"></a></h3>
+  <h3>LINE Pay API Tool <a href="https://github.com/victorzhn/line-pay-sdk-php"><img src="https://github.com/favicon.ico" height="20" width="20"></a></h3>
 
   <?php if($route=='order'): ?>
   <?php $status = (!isset($order['isSuccessful'])) ? 'none' : (($order['isSuccessful']) ? 'successful' : 'failed') ?>

@@ -1,21 +1,21 @@
 {
-    "name": "yidas/line-pay-sdk",
-    "description": "LINE Pay SDK for PHP",
+    "name": "VictorZhn/line-pay-sdk",
+    "description": "LINE Pay SDK for PHP 7.0+ and guzzle7.3",
     "keywords": ["LINE Pay", "api", "php", "sdk", "LINE SDK"],
-    "homepage": "https://github.com/yidas/line-pay-sdk-php",
+    "homepage": "https://github.com/VictorZhn/line-pay-sdk-php",
     "type": "library",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/yidas/line-pay-sdk-php/issues",
-        "source": "https://github.com/yidas/line-pay-sdk-php"
+        "issues": "https://github.com/VictorZhn/line-pay-sdk-php/issues",
+        "source": "https://github.com/VictorZhn/line-pay-sdk-php"
     },
     "require": {
-        "php": ">=5.4",
-        "guzzlehttp/guzzle": "~5.3.1|~6.0"
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^7.3"
     },
     "autoload": {
         "psr-4": {
-            "yidas\\": "src/"
+            "VictorZhn\\": "src/"
         }
     }
 }

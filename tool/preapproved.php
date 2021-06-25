@@ -13,7 +13,7 @@ if (isset($input['merchant'])) {
 }
 
 // Create LINE Pay client
-$linePay = new \yidas\linePay\Client([
+$linePay = new \victorzhn\linePay\Client([
     'channelId' => $input['channelId'],
     'channelSecret' => $input['channelSecret'],
     'isSandbox' => $input['isSandbox'], 

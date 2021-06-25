@@ -5,7 +5,7 @@ require __DIR__ . '/_config.php';
 // Get saved config
 $config = $_SESSION['config'];
 // Create LINE Pay client
-$linePay = new \yidas\linePay\Client([
+$linePay = new \victorzhn\linePay\Client([
     'channelId' => $config['channelId'],
     'channelSecret' => $config['channelSecret'],
     'isSandbox' => ($config['isSandbox']) ? true : false, 

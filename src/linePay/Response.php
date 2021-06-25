@@ -1,6 +1,6 @@
 <?php
 
-namespace yidas\linePay;
+namespace victorzhn\linePay;
 
 /**
  * LINE Pay Response

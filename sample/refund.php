@@ -5,7 +5,7 @@ require __DIR__ . '/_config.php';
 // Get saved config
 $config = $_SESSION['config'];
 // Create LINE Pay client
-$linePay = new \yidas\linePay\Client([
+$linePay = new \victorzhn\linePay\Client([
     'channelId' => $config['channelId'],
     'channelSecret' => $config['channelSecret'],
     'isSandbox' => ($config['isSandbox']) ? true : false, 
@@ -44,7 +44,7 @@ try {
         die("<script>alert('Refund Failed');location.href='{$successUrl}';</script>");
     }
 
-} catch (\yidas\linePay\exception\ConnectException $e) {
+} catch (\victorzhn\linePay\exception\ConnectException $e) {
     
     // Implement recheck process
     die("Refund/Details API timeout! A recheck mechanism should be implemented.");

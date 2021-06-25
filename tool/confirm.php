@@ -1,7 +1,7 @@
 <?php
 
-use yidas\linePay\Client;
-use yidas\linePay\exception\ConnectException;
+use victorzhn\linePay\Client;
+use victorzhn\linePay\exception\ConnectException;
 
 require __DIR__ . '/_config.php';
 

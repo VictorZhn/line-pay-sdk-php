@@ -13,11 +13,11 @@ require __DIR__ . '/../vendor/autoload.php';
  * Save log into logs in session
  *
  * @param string $name
- * @param \yidas\linePay\Response $response
+ * @param \victorzhn\linePay\Response $response
  * @param boolean $reset
  * @return void
  */
-function saveLog($name, \yidas\linePay\Response $response, $reset=false)
+function saveLog($name, \victorzhn\linePay\Response $response, $reset=false)
 {
     $stats = $response->getStats();
     $request = $stats->getRequest();

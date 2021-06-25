@@ -6,8 +6,8 @@
 
 require __DIR__ . '/_config.php';
 
-use yidas\linePay\Client as LinePayClient;
-use yidas\linePay\Response;
+use victorzhn\linePay\Client as LinePayClient;
+use victorzhn\linePay\Response;
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise;
 
