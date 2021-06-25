@@ -1,13 +1,13 @@
 {
-    "name": "VictorZhn/line-pay-sdk",
+    "name": "victorzhn/line-pay-sdk",
     "description": "LINE Pay SDK for PHP 7.0+ and guzzle7.3",
     "keywords": ["LINE Pay", "api", "php", "sdk", "LINE SDK"],
-    "homepage": "https://github.com/VictorZhn/line-pay-sdk-php",
+    "homepage": "https://github.com/victorzhn/line-pay-sdk-php",
     "type": "library",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/VictorZhn/line-pay-sdk-php/issues",
-        "source": "https://github.com/VictorZhn/line-pay-sdk-php"
+        "issues": "https://github.com/victorzhn/line-pay-sdk-php/issues",
+        "source": "https://github.com/victorzhn/line-pay-sdk-php"
     },
     "require": {
         "php": ">=7.0",
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VictorZhn\\": "src/"
+            "victorzhn\\": "src/"
         }
     }
 }
